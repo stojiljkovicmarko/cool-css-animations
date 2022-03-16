@@ -27,7 +27,7 @@ const SocialMediaBtns = () => {
     */
   return (
     <>
-      <a href="/#" class="ribbon">
+      <a href="https://github.com/stojiljkovicmarko/cool-css-animations/tree/main/src/buttons/social-media-btns" rel="noreferrer" target="_blank" class="ribbon">
         <FontAwesomeIcon className="fa" icon={faGithub} />
       </a>
       <div class="social-media-btns">
