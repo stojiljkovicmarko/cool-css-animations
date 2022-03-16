@@ -15,8 +15,9 @@ https://fontawesome.com/v6/docs/web/use-with/react/
     - import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 4. Import icons you want to use from which packet. Take care of the name of the icons.
-THere is difference between faFacebook and faFacebookF, or faLinkedinIn.
-When you search for the icon you will see the correct suffix.
+    There is difference between faFacebook and faFacebookF, or faLinkedinIn.
+    (https://fontawesome.com/search?q=linkedin&s=solid%2Cbrands - see here for linkedin)
+    When you search for the icon you will see the correct suffix.
     - import {
         faFacebookF,
         faTwitter,
