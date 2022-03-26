@@ -1,0 +1,219 @@
+.main {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+
+/* STYLING FOR FIRST HOVER EFFECT */
+
+.btn1 {
+  width: 150px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.btn1:hover {
+  background-color: blueviolet;
+  transition-delay: 800ms;
+  color: antiquewhite;
+  font-size: 1.2rem;
+}
+
+.d1,
+.d2 {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: blueviolet;
+  transform: scale(0);
+  transition: all 400ms;
+  transition-delay: 400ms;
+}
+
+.d1 {
+  top: 0;
+  transform-origin: left;
+}
+
+.d2 {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.btn1:hover .d1,
+.btn1:hover .d2 {
+  transform: scale(1);
+  transition-delay: 0ms;
+}
+
+.d3,
+.d4 {
+  position: absolute;
+  height: 100%;
+  width: 4px;
+  background-color: blueviolet;
+  transform: scale(0);
+  transition-property: all;
+  transition-duration: 400ms;
+  transition-delay: 400ms;
+}
+
+.d3 {
+  left: 0;
+  transform-origin: bottom;
+}
+
+.d4 {
+  right: 0;
+  transform-origin: top;
+}
+
+.btn1:hover .d3,
+.btn:hover .d4 {
+  transform: scale(1);
+}
+
+/* STYLING FOR SECOND HOVER EFFECT */
+
+.btn2 {
+  width: 150px;
+  height: 45px;
+  position: relative;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.btn2 p {
+  z-index: 1;
+}
+
+.btn2:hover {
+  transition: all 200ms ease-in;
+  transition-delay: 400ms;
+  background: white;
+  font-size: 1.2rem;
+}
+
+.b1,
+.b2 {
+  position: absolute;
+  width: 100%;
+  background-color: #4392F1;
+  height: 23px;
+  transform: scale(0);
+  transition-property: transform;
+  transition-timing-function: ease-in;
+  transition-duration: 400ms;
+  z-index: 0;
+}
+
+.b1 {
+  top: 0;
+  transform-origin: left;
+}
+
+.b2 {
+  bottom: 0;
+  transform-origin: right;
+}
+
+.btn2:hover .b1,
+.btn2:hover .b2 {
+  transform: scale(1);
+}
+
+/* FOR THIRD HOVER ANIMATION */
+
+.btn3 {
+  width: 150px;
+  height: 54px;
+  position: relative;
+  cursor: pointer;
+  transition: all 400ms;
+}
+
+.btn3 p {
+  z-index: 1;
+}
+
+.btn3:hover {
+  font-size: 1.4rem;
+  color: white;
+  transition-delay: 100ms;
+}
+
+.a1,
+.a2,
+.a3,
+.a4,
+.a5,
+.a6 {
+  position: absolute;
+  background-color: #a5243d;
+  width: 100%;
+  height: 9px;
+  transform: scale(0);
+  transition: all 400ms;
+  z-index: 0;
+}
+
+.a1,
+.a2,
+.a3,
+.a4,
+.a5,
+.a6 {
+  transform-origin: right;
+}
+
+.a1 {
+  bottom: 0;
+  background-color: #7f6a93;
+}
+
+.a2 {
+  bottom: 7px;
+  transition-delay: 100ms;
+  background-color: #102542;
+}
+
+.a3 {
+  bottom: 14px;
+  transition-delay: 200ms;
+  background-color: #19647e;
+}
+
+.a4 {
+  bottom: 21px;
+  transition-delay: 300ms;
+  background-color: #659157;
+}
+
+.a5 {
+  bottom: 28px;
+  transition-delay: 400ms;
+  background-color: #e4572e;
+}
+
+.a6 {
+  bottom: 35px;
+  transition-delay: 500ms;
+}
+
+.btn3:hover .a1,
+.btn3:hover .a2,
+.btn3:hover .a3,
+.btn3:hover .a4,
+.btn3:hover .a5,
+.btn3:hover .a6 {
+  transform: scale(1);
+}

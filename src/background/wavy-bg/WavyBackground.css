@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+section {
+  height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+section div:first-child {
+  max-width: 90%;
+}
+
+h1 {
+  font-family: "Dancing Script", cursive;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+}
+
+.section1 {
+  background: #7069d4;
+  color: #131920;
+}
+
+.section2 {
+  background: #202731;
+  color: rgb(185, 185, 185);
+}
+
+/* 
+height of the curve controls the diameter of elipsis 
+bottom places it at the end of section
+*/
+
+.curve {
+  position: absolute;
+  height: calc(15vw);
+  min-height: 120px;
+  width: 100%;
+  bottom: 0;
+}
+.curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  transform: translate(85%, 60%);
+  background-color: hsl(216, 21%, 16%);
+}
+.curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background: #7069d4;
+  transform: translate(-4%, 40%);
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 425px) {
+  h1 {
+    font-size: 3.2rem;
+  }
+
+  p {
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+  }
+}
