@@ -1,0 +1,39 @@
+.three-layers-part2 {
+  background-color: #f9f871;
+  letter-spacing: 5px;
+}
+
+.three-layers-part2::before {
+  content: "wait";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #6abaa3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transition: transform 700ms;
+}
+
+.three-layers-part2::after {
+  content: "submit";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: tomato;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(270deg);
+  transition: transform 700ms 700ms;
+}
+
+.three-layers-part2:hover::before,
+.three-layers-part2:hover:after {
+  transform: rotateX(0deg);
+}

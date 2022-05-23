@@ -1,0 +1,35 @@
+.border-swap-part2 {
+  color: var(--light);
+}
+
+.border-swap-part2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 140%;
+  top: -20%;
+  left: 0;
+  border-left: 2px solid #76eaaf;
+  border-right: 2px solid #edfcff;
+  transition: transform 400ms;
+}
+
+.border-swap-part2::after {
+  content: "";
+  position: absolute;
+  width: 120%;
+  height: 100%;
+  top: 0;
+  left: -10%;
+  border-top: 2px solid #76eaaf;
+  border-bottom: 2px solid #edfcff;
+  transition: transform 400ms 400ms;
+}
+
+.border-swap-part2:hover::before {
+  transform: rotateY(180deg);
+}
+
+.border-swap-part2:hover::after {
+  transform: rotateX(180deg);
+}

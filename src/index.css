@@ -5,3 +5,30 @@
   margin: 0;
   padding: 0;
 }
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+:root {
+  --bg-main: #131920;
+  --light: #ebebeb;
+  /* --purple: #7069d4; */
+  /* --orange: #ff9577; */
+  --purple: #9e7dcf;
+  --purple-dark: hsl(264, 46%, 55%);
+  --yellow: #fcd144;
+  --cyan: #2caaaa;
+  --blue: #04add7;
+  --green: #7ecc52;
+  --red: #eb334e;
+
+  --font-dancing: "Dancing Script", cursive;
+  --font-poppins: "Poppins", sans-serif;
+}

@@ -1,0 +1,60 @@
+.split {
+  border: 2px solid #2c3e50;
+  border-radius: 10px;
+  color: #2c3e50;
+  overflow: hidden;
+}
+
+.split:hover {
+  color: var(--light);
+  border-color: var(--light);
+}
+
+.split::before,
+.split::after,
+.split > span::before,
+.split > span::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #0085d0;
+  transition: all 200ms;
+  z-index: -1;
+}
+
+.split::before {
+  top: 0;
+  left: -25%;
+}
+
+.split::after {
+  top: 0;
+  right: -25%;
+}
+
+.split:hover::before {
+  left: 0;
+}
+
+.split:hover::after {
+  right: 0;
+}
+
+.split > span::before {
+  top: -100%;
+  left: 25%;
+}
+
+.split > span::after {
+  top: 100%;
+  right: 25%;
+}
+
+.split:hover span::before {
+  top: 0;
+}
+
+.split:hover span::after {
+  top: 0;
+}

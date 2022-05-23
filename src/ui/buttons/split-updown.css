@@ -1,0 +1,60 @@
+.split-updown {
+  border: 3px solid var(--light);
+  color: var(--light);
+  font-weight: bold;
+  border-radius: 10px;
+  letter-spacing: 3px;
+  overflow: hidden;
+}
+
+.split-updown::before,
+.split-updown::after,
+.split-updown > span::before,
+.split-updown > span::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 100%;
+  background-color: #cca219;
+  transition: all 200ms;
+  z-index: -1;
+}
+
+.split-updown::before {
+  top: 100%;
+  left: 0;
+}
+
+.split-updown::after {
+  top: -100%;
+  right: 0;
+  transition-delay: 300ms;
+}
+
+.split-updown:hover::before {
+  top: 0;
+}
+
+.split-updown:hover::after {
+  top: 0;
+}
+
+.split-updown > span::before {
+  top: -100%;
+  left: 25%;
+  transition-delay: 100ms;
+}
+
+.split-updown > span::after {
+  top: 100%;
+  right: 25%;
+  transition-delay: 200ms;
+}
+
+.split-updown:hover span::before {
+  top: 0;
+}
+
+.split-updown:hover span::after {
+  top: 0;
+}

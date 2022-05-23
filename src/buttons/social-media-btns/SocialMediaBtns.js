@@ -27,11 +27,16 @@ const SocialMediaBtns = () => {
     */
   return (
     <>
-      <a href="https://github.com/stojiljkovicmarko/cool-css-animations/tree/main/src/buttons/social-media-btns" rel="noreferrer" target="_blank" class="ribbon">
+      <a
+        href="https://github.com/stojiljkovicmarko/cool-css-animations/tree/main/src/buttons/social-media-btns"
+        rel="noreferrer"
+        target="_blank"
+        class="ribbon"
+      >
         <FontAwesomeIcon className="fa" icon={faGithub} />
       </a>
       <div class="social-media-btns">
-        <div class="ribbon-2">Social media buttons animations</div>
+        <div class="ribbon-2">Hover for cool animation</div>
         <a href="/#" class="btn facebook">
           <FontAwesomeIcon className="fa" icon={faFacebookF} />
         </a>

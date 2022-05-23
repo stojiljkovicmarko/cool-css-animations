@@ -1,0 +1,38 @@
+.diagonal-replace {
+  color: var(--purple);
+  border: 3px solid white;
+  overflow: hidden;
+}
+
+.diagonal-replace::before,
+.diagonal-replace::after {
+  content: "Replace me";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #845ec2;
+
+  transition: all 500ms;
+}
+
+.diagonal-replace::before {
+  content: "I'm new";
+}
+
+.diagonal-replace::before {
+  transform: translate(-101%, 101%);
+}
+
+.diagonal-replace:hover::before {
+  transform: translate(0, 0);
+}
+
+.diagonal-replace:hover::after {
+  transform: translate(101%, -101%);
+}

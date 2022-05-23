@@ -1,0 +1,57 @@
+.diamond-fill {
+  border: 4px solid var(--bg-main);
+  color: var(--bg-main);
+  font-weight: bold;
+  border-radius: 10px;
+  z-index: 1;
+
+  overflow: hidden;
+}
+
+.diamond-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2.5rem solid var(--bg-main);
+  border-bottom: 2.5rem solid var(--bg-main);
+  border-right: 2.5rem solid transparent;
+  z-index: -1;
+  transform: translateX(-100%);
+
+  transition: all 500ms;
+}
+
+.diamond-fill:hover {
+  color: var(--light);
+}
+
+.diamond-fill:hover::before {
+  transform: translateX(0);
+}
+
+.diamond-fill::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 2.5rem solid var(--bg-main);
+  border-bottom: 2.5rem solid var(--bg-main);
+  border-left: 2.5rem solid transparent;
+  z-index: -1;
+  transform: translateX(100%);
+
+  transition: all 500ms;
+}
+
+.diamond-fill:hover::after {
+  transform: translateX(0);
+}

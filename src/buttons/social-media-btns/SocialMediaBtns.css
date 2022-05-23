@@ -174,7 +174,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
 
   background-color: grey;
-  padding: 6rem 3rem;
+  padding: 8rem 3rem 6rem 3rem;
   border-radius: 25px;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.4);
 
@@ -243,6 +243,7 @@
 
   .social-media-btns {
     grid-template-columns: 1fr 1fr;
+    padding-top: 11rem;
   }
 
   .social-media-btns .btn {

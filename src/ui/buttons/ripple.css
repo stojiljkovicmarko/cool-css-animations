@@ -1,0 +1,34 @@
+.ripple {
+  background-color: var(--light);
+  border-radius: 30px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.ripple::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--light);
+  border-radius: 30px;
+  z-index: -1;
+  transition: all 300ms;
+}
+
+.ripple:hover::before {
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+.ripple:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ripple:active {
+  transform: translate(-1px);
+  box-shadow: 0 5px 10px #8fafea;
+}

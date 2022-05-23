@@ -1,13 +1,21 @@
-// import WavyBackground from "./background/wavy-bg/WavyBackground";
-// import SocialMediaBtns from "./buttons/social-media-btns/SocialMediaBtns";
+import { Routes, Route, Navigate } from "react-router-dom";
 
-import BtnBorderAnimation from "./BtnBorderAnimation/BtnBorderAnimation";
+import Home from "./pages/Home";
+import SocialMediaBtns from "./buttons/social-media-btns/SocialMediaBtns";
+import Header from "./components/Header";
+
+// import BtnBorderAnimation from "./BtnBorderAnimation/BtnBorderAnimation";
 
 function App() {
   return (
-    <div>
-      <BtnBorderAnimation />
-    </div>
+    <>
+      <Header />
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/social-media-buttons" element={<SocialMediaBtns />} />
+        <Route path="/" element={<Navigate replace to="/home" />} />
+      </Routes>
+    </>
   );
 }
 

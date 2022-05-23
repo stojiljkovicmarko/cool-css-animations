@@ -1,0 +1,43 @@
+.firstletter-expanding {
+  border: 2px solid black;
+  display: inline-block;
+}
+
+.firstletter-expanding:hover {
+  color: white;
+}
+
+.firstletter-expanding::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: -1;
+  opacity: 0;
+  transition: all 800ms;
+}
+
+.firstletter-expanding:hover::before {
+  opacity: 1;
+  transform: rotate(15deg);
+}
+
+.firstletter-expanding span {
+  color: transparent;
+  position: relative;
+}
+
+.firstletter-expanding span::before {
+  content: "B";
+  position: absolute;
+  color: black;
+  transition: all 200ms;
+}
+
+.firstletter-expanding:hover span::before {
+  color: white;
+  transform: translate(-85%, -15%) rotate(360deg) scale(2.8);
+}

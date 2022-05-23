@@ -1,0 +1,37 @@
+.slash {
+  border: 0px;
+  overflow: hidden;
+}
+
+.slash:hover {
+  color: white;
+}
+
+.slash span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 97%;
+  height: 95%;
+  background-color: transparent;
+  border: 2px solid #222;
+  z-index: -1;
+}
+
+.slash span::before {
+  content: "";
+  position: absolute;
+  height: 500%;
+  width: 6%;
+  background-color: var(--purple);
+  top: 50%;
+  left: 50%;
+  transition: all 200ms;
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.slash:hover span::before {
+  width: 100%;
+  background-color: #222;
+  transform: translate(-50%, -50%) rotate(60deg);
+}

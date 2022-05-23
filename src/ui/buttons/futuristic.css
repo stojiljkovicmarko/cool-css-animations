@@ -1,0 +1,48 @@
+.futuristic {
+  color: var(--light);
+  z-index: 1;
+}
+
+.futuristic:hover {
+  color: #212121;
+}
+
+.futuristic::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  height: 100%;
+  background-color: #ff7576;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transform-origin: top;
+  transition: all 300ms;
+}
+
+.futuristic:hover::before {
+  top: -6px;
+  left: 0;
+  transform: perspective(800px) rotateX(75deg);
+}
+
+.futuristic::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 100%;
+  height: 100%;
+  background-color: #20caff;
+  z-index: -1;
+  mix-blend-mode: multiply;
+  transform-origin: bottom;
+  transition: all 300ms;
+}
+
+.futuristic:hover::after {
+  top: 6px;
+  left: 0;
+  transform: perspective(800px) rotateX(-75deg);
+}
